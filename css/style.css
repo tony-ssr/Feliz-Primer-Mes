@@ -1,0 +1,1393 @@
+/* ====================================================================
+   PÁGINA WEB ROMÁNTICA - PRIMER MES CON MARÍA ALEJANDRA
+   Estilos CSS con animaciones avanzadas y diseño kawaii Pompompurin
+   Autor: Antony
+   ==================================================================== */
+
+/* ====================================================================
+   VARIABLES CSS GLOBALES
+   Pal
+
+eta de colores, tipografías y valores reutil izables
+   ==================================================================== */
+:root {
+    /* Colores base Pompompurin */
+    --color-crema: #FFF9E3;
+    --color-amarillo: #FBDD5D;
+    --color-marron: #5D3A1A;
+    --color-rosa: #FFB6C1;
+    --color-rojo: #FF6B6B;
+    --color-blanco: #FFFFFF;
+
+    /* Degradados románticos */
+    --gradient-romantic: linear-gradient(135deg, #FFB6C1 0%, #FBDD5D 100%);
+    --gradient-sunset: linear-gradient(135deg, #FF6B6B 0%, #FFB6C1 50%, #FBDD5D 100%);
+
+    /* Tipografías */
+    --font-principal: 'Quicksand', sans-serif;
+    --font-titulo: 'Fredoka One', cursive;
+
+    /* Espaciados */
+    --espacio-xs: 0.5rem;
+    --espacio-sm: 1rem;
+    --espacio-md: 2rem;
+    --espacio-lg: 3rem;
+    --espacio-xl: 5rem;
+
+    /* Sombras */
+    --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 8px 30px rgba(0, 0, 0, 0.15);
+    --sombra-fuerte: 0 15px 50px rgba(0, 0, 0, 0.2);
+
+    /* Transiciones */
+    --transicion-rapida: 0.3s ease;
+    --transicion-media: 0.5s ease;
+    --transicion-lenta: 0.8s ease;
+}
+
+/* ====================================================================
+   RESET Y ESTILOS BASE
+   Normalización y configuración inicial del documento
+   ==================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Scroll suave entre secciones */
+    font-size: 16px;
+    /* Base para rem */
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--color-crema);
+    color: var(--color-marron);
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Evita scroll horizontal */
+    position: relative;
+}
+
+/* ====================================================================
+   FONDO ANIMADO MEJORADO - CORAZONES Y ESTRELLAS FLOTANTES
+   Animación continua más compleja y dinámica
+   ==================================================================== */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Capa 1: Corazones grandes */
+body::before {
+    content: '💛 💖 💕 💗 💛 💖 💕 💗 💛 💖 💛 💖 💕 💗';
+    top: 100%;
+    left: 0;
+    font-size: 2.5rem;
+    word-spacing: 4rem;
+    line-height: 6rem;
+    opacity: 0.12;
+    animation: floatingHearts 30s linear infinite;
+}
+
+/* Capa 2: Estrellas y elementos pequeños */
+body::after {
+    content: '✨ ⭐ 🌟 💫 ✨ ⭐ 🌟 💫 ✨ ⭐ 🌟 💫 ✨ ⭐';
+    top: 100%;
+    right: 0;
+    font-size: 1.5rem;
+    word-spacing: 5rem;
+    line-height: 7rem;
+    opacity: 0.1;
+    animation: floatingStars 40s linear infinite;
+}
+
+/* Animación de corazones flotando hacia arriba */
+@keyframes floatingHearts {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.12;
+    }
+
+    90% {
+        opacity: 0.12;
+    }
+
+    100% {
+        top: -100%;
+        opacity: 0;
+    }
+}
+
+/* Animación de estrellas con movimiento diferente */
+@keyframes floatingStars {
+    0% {
+        top: 100%;
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    10% {
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    90% {
+        opacity: 0.1;
+    }
+
+    100% {
+        top: -100%;
+        opacity: 0;
+        transform: translateX(0);
+    }
+}
+
+/* ====================================================================
+   ANIMACIONES GENERALES DE SCROLL
+   Apariciones y transiciones para elementos al hacer scroll
+   ==================================================================== */
+
+/* Fade in desde abajo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide desde la izquierda */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide desde la derecha */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Efecto de latido de corazón */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Flotación suave (arriba y abajo) */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Clases para aplicar animaciones (JavaScript las agrega) */
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in-left {
+    opacity: 0;
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.fade-in-right {
+    opacity: 0;
+    animation: slideInRight 0.8s ease forwards;
+}
+
+/* ====================================================================
+   CONTENEDOR Y LAYOUT GENERAL
+   ==================================================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espacio-md);
+    position: relative;
+    z-index: 1;
+}
+
+/* Títulos de sección */
+.section-title {
+    font-family: var(--font-titulo);
+    font-size: 3rem;
+    color: var(--color-amarillo);
+    text-align: center;
+    margin-bottom: var(--espacio-lg);
+    text-shadow: 3px 3px 0 var(--color-marron);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ====================================================================
+   SECCIÓN HERO - BIENVENIDA PRINCIPAL
+   ==================================================================== */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--espacio-xl) var(--espacio-md);
+    background: var(--gradient-sunset);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    animation: fadeInUp 1s ease;
+}
+
+/* Título principal con nombres */
+.hero-title {
+    font-family: var(--font-titulo);
+    font-size: clamp(2rem, 8vw, 5rem);
+    color: var(--color-blanco);
+    margin-bottom: var(--espacio-md);
+    text-shadow: 4px 4px 0 var(--color-marron);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espacio-sm);
+}
+
+.hero-title .name {
+    display: inline-block;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.hero-title .heart {
+    display: inline-block;
+    font-size: clamp(2.5rem, 10vw, 6rem);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Subtítulo romántico */
+.hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: var(--color-crema);
+    margin-bottom: var(--espacio-lg);
+    font-weight: 500;
+    animation: fadeInUp 1.2s ease;
+}
+
+/* Contador completo: días, horas, minutos, segundos */
+.counter-container {
+    margin: var(--espacio-lg) 0;
+    animation: fadeInUp 1.4s ease;
+}
+
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--espacio-md);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.counter-box {
+    background: var(--color-amarillo);
+    padding: var(--espacio-md);
+    border-radius: 20px;
+    box-shadow: var(--sombra-media);
+    transition: transform var(--transicion-rapida);
+}
+
+.counter-box:hover {
+    transform: translateY(-5px);
+}
+
+.counter-number {
+    font-family: var(--font-titulo);
+    font-size: 3rem;
+    color: var(--color-marron);
+    line-height: 1;
+}
+
+.counter-label {
+    font-size: 0.9rem;
+    color: var(--color-marron);
+    font-weight: 600;
+    margin-top: var(--espacio-xs);
+    text-transform: uppercase;
+}
+
+/* Mensaje adicional */
+.hero-message {
+    font-size: 1.2rem;
+    color: var(--color-crema);
+    margin-top: var(--espacio-md);
+    font-style: italic;
+    animation: fadeInUp 1.6s ease;
+}
+
+/* ====================================================================
+   DIVISORES ONDULADOS SVG
+   Transición suave entre secciones
+   ==================================================================== */
+.wave-divider {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+}
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+
+.wave-divider.inverted svg {
+    transform: rotate(180deg);
+}
+
+/* ====================================================================
+   SECCIÓN TIMELINE - NUESTROS MOMENTOS ESPECIALES
+   ==================================================================== */
+.timeline-section {
+    padding: var(--espacio-xl) 0;
+    background-color: var(--color-blanco);
+}
+
+.timeline-item {
+    margin-bottom: var(--espacio-xl);
+    padding: var(--espacio-lg);
+    background: var(--color-crema);
+    border-radius: 30px;
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicion-rapida), box-shadow var(--transicion-rapida);
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--espacio-md);
+    flex-wrap: wrap;
+    gap: var(--espacio-sm);
+}
+
+.timeline-header h3 {
+    font-family: var(--font-titulo);
+    font-size: 2rem;
+    color: var(--color-amarillo);
+    text-shadow: 2px 2px 0 var(--color-marron);
+}
+
+.timeline-header .date {
+    font-size: 1rem;
+    color: var(--color-marron);
+    background: var(--color-rosa);
+    padding: var(--espacio-xs) var(--espacio-sm);
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.timeline-description {
+    font-size: 1.2rem;
+    color: var(--color-marron);
+    margin-bottom: var(--espacio-md);
+    font-style: italic;
+    text-align: center;
+}
+
+/* ====================================================================
+   CARRUSEL - NUESTRA PRIMERA CITA
+   ==================================================================== */
+.carousel-container {
+    margin-top: var(--espacio-md);
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--sombra-media);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform var(--transicion-media);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    /* Indicar que es clickeable */
+    transition: transform var(--transicion-rapida);
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.02);
+}
+
+/* Botones de navegación del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(251, 221, 93, 0.9);
+    border: none;
+    color: var(--color-marron);
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transicion-rapida);
+    box-shadow: var(--sombra-suave);
+    z-index: 2;
+}
+
+.carousel-btn:hover {
+    background: var(--color-amarillo);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: var(--espacio-sm);
+}
+
+.carousel-btn.next {
+    right: var(--espacio-sm);
+}
+
+/* Indicadores (dots) del carrusel */
+.carousel-indicators {
+    position: absolute;
+    bottom: var(--espacio-md);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--espacio-xs);
+    z-index: 2;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all var(--transicion-rapida);
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.indicator.active {
+    background: var(--color-amarillo);
+    width: 30px;
+    border-radius: 10px;
+}
+
+/* ====================================================================
+   TARJETAS POLAROID - MOMENTOS ESPECIALES
+   ==================================================================== */
+.polaroid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--espacio-lg);
+    margin-top: var(--espacio-md);
+}
+
+.polaroid {
+    background: var(--color-blanco);
+    padding: 15px;
+    padding-bottom: 60px;
+    box-shadow: var(--sombra-suave);
+    transform: rotate(var(--rotation, 0deg));
+    transition: all var(--transicion-media);
+    cursor: pointer;
+}
+
+.polaroid:nth-child(1) {
+    --rotation: -3deg;
+}
+
+.polaroid:nth-child(2) {
+    --rotation: 2deg;
+}
+
+.polaroid:nth-child(3) {
+    --rotation: -2deg;
+}
+
+.polaroid:nth-child(4) {
+    --rotation: 3deg;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: var(--sombra-fuerte);
+    z-index: 10;
+}
+
+.polaroid-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.polaroid-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transicion-media);
+}
+
+.polaroid:hover .polaroid-image img {
+    transform: scale(1.1);
+}
+
+.polaroid-caption {
+    text-align: center;
+    margin-top: var(--espacio-sm);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1rem;
+    color: var(--color-marron);
+}
+
+/* ====================================================================
+   GRID MASONRY - CARNAVAL EN PASTO
+   Diseño tipo "muro de ladrillos" con mejor centrado
+   ==================================================================== */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--espacio-md);
+    margin-top: var(--espacio-md);
+}
+
+.masonry-item {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: var(--sombra-suave);
+    transition: all var(--transicion-rapida);
+    cursor: pointer;
+}
+
+.masonry-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.masonry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transicion-media);
+}
+
+.masonry-item:hover img {
+    transform: scale(1.1);
+}
+
+/* ====================================================================
+   COLLAGE FLOTANTE - POMPOMPURIN & FOTITOS
+   ==================================================================== */
+.floating-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--espacio-md);
+    margin-top: var(--espacio-md);
+}
+
+.floating-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    animation: float 4s ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+    cursor: pointer;
+}
+
+.floating-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transicion-rapida);
+}
+
+.floating-image:hover img {
+    transform: scale(1.1);
+}
+
+/* ====================================================================
+   SECCIÓN "POR QUÉ TÚ"
+   ==================================================================== */
+.why-section {
+    padding: var(--espacio-xl) 0;
+    background-color: var(--color-crema);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--espacio-lg);
+    margin-top: var(--espacio-md);
+}
+
+.why-card {
+    background: var(--color-blanco);
+    padding: var(--espacio-lg);
+    border-radius: 25px;
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+    transition: all var(--transicion-rapida);
+    position: relative;
+    /* Para que los iconos queden bien posicionados */
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.why-icon {
+    font-size: 4rem;
+    margin-bottom: var(--espacio-sm);
+    animation: pulse 2s ease-in-out infinite;
+    display: block;
+    /* Asegurar que siempre se muestre */
+}
+
+.why-card h3 {
+    font-family: var(--font-titulo);
+    font-size: 1.5rem;
+    color: var(--color-amarillo);
+    margin-bottom: var(--espacio-sm);
+    text-shadow: 1px 1px 0 var(--color-marron);
+}
+
+.why-card p {
+    font-size: 1.1rem;
+    color: var(--color-marron);
+    line-height: 1.6;
+}
+
+/* ====================================================================
+   SECCIÓN PLAYLIST DE SPOTIFY - CANCIONES PARA TI
+   Color distintivo: Degradado lila/lavanda romántico
+   ==================================================================== */
+.spotify-section {
+    padding: var(--espacio-xl) 0;
+    background: linear-gradient(135deg, #E8D5F2 0%, #F5E6FF 50%, #FFE5F1 100%);
+    position: relative;
+}
+
+.spotify-description {
+    max-width: 700px;
+    margin: 0 auto var(--espacio-lg);
+    text-align: center;
+}
+
+.spotify-description p {
+    font-size: 1.3rem;
+    color: var(--color-marron);
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.spotify-player-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.spotify-frame {
+    background: rgba(255, 255, 255, 0.9);
+    padding: var(--espacio-md);
+    border-radius: 25px;
+    box-shadow: var(--sombra-fuerte);
+    transition: all var(--transicion-rapida);
+}
+
+.spotify-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(251, 221, 93, 0.4);
+}
+
+.spotify-frame iframe {
+    border-radius: 12px;
+    display: block;
+}
+
+.spotify-message {
+    margin-top: var(--espacio-md);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    padding: var(--espacio-sm) var(--espacio-md);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.spotify-message p {
+    font-size: 1.2rem;
+    color: var(--color-marron);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ====================================================================
+   SECCIÓN CARTA - DISEÑO SIMPLE Y HERMOSO
+   ==================================================================== */
+.letter-section {
+    padding: var(--espacio-xl) 0;
+    background-color: var(--color-blanco);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Sobre simple con degradado */
+.simple-envelope {
+    max-width: 500px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all var(--transicion-rapida);
+}
+
+.simple-envelope:hover {
+    transform: translateY(-10px);
+}
+
+.envelope-gradient {
+    background: var(--gradient-romantic);
+    border-radius: 25px;
+    padding: var(--espacio-xl) var(--espacio-lg);
+    box-shadow: var(--sombra-fuerte);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de brillo en hover */
+.envelope-gradient::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s;
+}
+
+.simple-envelope:hover .envelope-gradient::before {
+    left: 100%;
+}
+
+.envelope-icon {
+    font-size: 5rem;
+    margin-bottom: var(--espacio-sm);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.envelope-message {
+    font-family: var(--font-titulo);
+    font-size: 1.8rem;
+    color: var(--color-marron);
+    margin-bottom: var(--espacio-sm);
+}
+
+.envelope-heart-pulse {
+    font-size: 3rem;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Modal de la carta */
+.letter-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.letter-modal.active {
+    display: flex;
+    /* Visible cuando está activo */
+}
+
+/* Overlay oscuro de fondo */
+.letter-close-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+}
+
+/* Contenedor de la carta */
+.letter-container {
+    background: var(--color-crema);
+    border-radius: 20px;
+    padding: var(--espacio-lg);
+    max-width: 700px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--sombra-fuerte);
+    animation: fadeInUp 0.4s ease;
+}
+
+/* Título de la carta */
+.letter-title {
+    font-family: var(--font-titulo);
+    font-size: 2.5rem;
+    color: var(--color-amarillo);
+    text-shadow: 2px 2px 0 var(--color-marron);
+    text-align: center;
+    margin-bottom: var(--espacio-md);
+}
+
+/* Texto de la carta */
+.letter-text {
+    font-size: 1.1rem;
+    color: var(--color-marron);
+    line-height: 1.8;
+}
+
+.letter-text p {
+    margin-bottom: var(--espacio-md);
+    text-align: justify;
+}
+
+/* Firma */
+.letter-sign {
+    text-align: right;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--color-rojo);
+    margin-top: var(--espacio-lg);
+    margin-bottom: 0 !important;
+}
+
+/* Botón de cerrar */
+.letter-close-btn {
+    display: block;
+    width: 100%;
+    margin-top: var(--espacio-lg);
+    padding: var(--espacio-sm) var(--espacio-md);
+    background: var(--gradient-romantic);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-titulo);
+    font-size: 1.3rem;
+    color: var(--color-marron);
+    cursor: pointer;
+    box-shadow: var(--sombra-suave);
+    transition: all var(--transicion-rapida);
+}
+
+.letter-close-btn:hover {
+    transform: scale(1.05);
+    box-shadow: var(--sombra-media);
+}
+
+
+/* ====================================================================
+   MODAL PARA IMÁGENES
+   ==================================================================== */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    display: none;
+    /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    padding: var(--espacio-md);
+}
+
+.image-modal.active {
+    display: flex;
+    /* Mostrar cuando está activo */
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 4rem;
+    color: var(--color-blanco);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+    transition: transform var(--transicion-rapida);
+}
+
+.modal-close:hover {
+    transform: scale(1.2) rotate(90deg);
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+    animation: fadeInUp 0.3s ease;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 15px;
+    box-shadow: var(--sombra-fuerte);
+}
+
+.modal-caption {
+    font-size: 1.3rem;
+    color: var(--color-blanco);
+    margin-top: var(--espacio-md);
+    font-style: italic;
+}
+
+/* ====================================================================
+   REPRODUCTOR DE MÚSICA FLOTANTE
+   ==================================================================== */
+.music-player {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--color-blanco);
+    border-radius: 20px;
+    box-shadow: var(--sombra-fuerte);
+    padding: var(--espacio-sm);
+    z-index: 1000;
+    transition: all var(--transicion-rapida);
+    max-width: 350px;
+}
+
+.music-player.minimized {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.music-player.minimized .player-content {
+    display: none;
+}
+
+/* Botón de minimizar/maximizar */
+.player-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--color-amarillo);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all var(--transicion-rapida);
+    z-index: 10;
+}
+
+.player-toggle:hover {
+    background: var(--color-rosa);
+    transform: scale(1.1);
+}
+
+.music-player.minimized .player-toggle {
+    position: static;
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+}
+
+/* Contenido del reproductor */
+.player-content {
+    padding-top: 50px;
+}
+
+/* Carátula del álbum */
+.player-artwork {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: var(--espacio-sm);
+    box-shadow: var(--sombra-suave);
+}
+
+.player-artwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* Información de la canción */
+.player-info {
+    text-align: center;
+    margin-bottom: var(--espacio-sm);
+}
+
+.song-title {
+    font-family: var(--font-titulo);
+    font-size: 1.2rem;
+    color: var(--color-marron);
+    margin-bottom: var(--espacio-xs);
+}
+
+.song-artist {
+    font-size: 1rem;
+    color: var(--color-marron);
+    opacity: 0.7;
+}
+
+/* Controles de reproducción */
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espacio-sm);
+    margin-bottom: var(--espacio-sm);
+}
+
+.control-btn {
+    background: var(--color-amarillo);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all var(--transicion-rapida);
+    box-shadow: var(--sombra-suave);
+}
+
+.control-btn:hover {
+    background: var(--color-rosa);
+    transform: scale(1.1);
+}
+
+.play-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    background: var(--color-rojo);
+    color: var(--color-blanco);
+}
+
+/* Barra de progreso */
+.progress-container {
+    margin-bottom: var(--espacio-sm);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(93, 58, 26, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient-romantic);
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--color-marron);
+    margin-top: var(--espacio-xs);
+}
+
+/* Control de volumen */
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-xs);
+}
+
+.volume-icon {
+    font-size: 1.2rem;
+}
+
+.volume-slider {
+    flex: 1;
+    height: 6px;
+    border-radius: 10px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(93, 58, 26, 0.2);
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-amarillo);
+    cursor: pointer;
+    transition: background var(--transicion-rapida);
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+    background: var(--color-rosa);
+}
+
+/* ====================================================================
+   FOOTER
+   ==================================================================== */
+.footer {
+    background: var(--color-marron);
+    color: var(--color-crema);
+    padding: var(--espacio-lg) 0;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    margin-bottom: var(--espacio-xs);
+}
+
+.footer-date {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* ====================================================================
+   RESPONSIVE - MOBILE FIRST
+   Adaptaciones para diferentes tamaños de pantalla
+   ==================================================================== */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 768px) {
+    :root {
+        --espacio-xl: 3rem;
+        --espacio-lg: 2rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counter-number {
+        font-size: 2.5rem;
+    }
+
+    .carousel-slide img {
+        height: 300px;
+    }
+
+    .carousel-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 2rem;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .music-player {
+        top: 10px;
+        right: 10px;
+        max-width: 300px;
+    }
+}
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 480px) {
+    :root {
+        --espacio-xl: 2rem;
+        --espacio-lg: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        flex-direction: column;
+    }
+
+    .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--espacio-sm);
+    }
+
+    .counter-number {
+        font-size: 2rem;
+    }
+
+    .counter-label {
+        font-size: 0.75rem;
+    }
+
+    .carousel-slide img {
+        height: 250px;
+    }
+
+    .masonry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .polaroid-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .floating-collage {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .music-player {
+        max-width: calc(100% - 20px);
+    }
+
+    .envelope-top {
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+        border-top: 80px solid var(--color-rosa);
+        margin-bottom: -40px;
+    }
+}
+
+/* ====================================================================
+   UTILIDADES Y CLASES AUXILIARES
+   ==================================================================== */
+
+/* Scroll suave personalizado */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-crema);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-amarillo);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-rosa);
+}
+
+/* Mejora de rendimiento en animaciones */
+.fade-in-up,
+.fade-in-left,
+.fade-in-right,
+.floating-image {
+    will-change: transform, opacity;
+}

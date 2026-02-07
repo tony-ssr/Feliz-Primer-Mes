@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- ============================================
+         META TAGS ESENCIALES
+         Configuración básica del documento
+    ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Celebrando nuestro primer mes juntos - Antony & María Alejandra">
+    <meta name="author" content="Antony">
+    <title>Un Mes de Amor 💛 Antony & María Alejandra</title>
+
+    <!-- ============================================
+         FUENTES DE GOOGLE
+         Quicksand: Texto principal (suave y romántico)
+         Fredoka One: Títulos (divertido y kawaii)
+    ============================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Fredoka+One&display=swap"
+        rel="stylesheet">
+
+    <!-- ============================================
+         HOJA DE ESTILOS PRINCIPAL
+    ============================================ -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ====================================================================
+         SECCIÓN HERO - BIENVENIDA PRINCIPAL
+         Primera impresión: Nombres grandes, contador y mensaje romántico
+    ==================================================================== -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <!-- Título principal con nombres -->
+            <h1 class="hero-title">
+                <span class="name">Antony</span>
+                <span class="heart">💛</span>
+                <span class="name">María Alejandra</span>
+            </h1>
+
+            <!-- Subtítulo animado -->
+            <p class="hero-subtitle">Un mes de felicidad, y toda una vida por delante</p>
+
+            <!-- Contador completo: días, horas, minutos, segundos -->
+            <div class="counter-container">
+                <div class="counter-grid">
+                    <div class="counter-box">
+                        <div id="daysCounter" class="counter-number">0</div>
+                        <div class="counter-label">Días</div>
+                    </div>
+                    <div class="counter-box">
+                        <div id="hoursCounter" class="counter-number">0</div>
+                        <div class="counter-label">Horas</div>
+                    </div>
+                    <div class="counter-box">
+                        <div id="minutesCounter" class="counter-number">0</div>
+                        <div class="counter-label">Minutos</div>
+                    </div>
+                    <div class="counter-box">
+                        <div id="secondsCounter" class="counter-number">0</div>
+                        <div class="counter-label">Segundos</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Texto adicional romántico -->
+            <p class="hero-message">Desde el 6 de diciembre de 2025</p>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         DIVISOR ONDULADO SVG
+         Transición suave entre secciones
+    ==================================================================== -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                fill="#FFF9E3"></path>
+        </svg>
+    </div>
+
+    <!-- ====================================================================
+         SECCIÓN: NUESTRA HISTORIA (LÍNEA DEL TIEMPO)
+         Presenta los momentos más importantes con diferentes estilos visuales
+    ==================================================================== -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Momentos Especiales �</h2>
+
+            <!-- ========================================
+                 MOMENTO 1: NUESTRA PRIMERA CITA
+                 Carrusel automático con las fotos
+            ======================================== -->
+            <div class="timeline-item fade-in-up">
+                <div class="timeline-header">
+                    <h3>Nuestra Primera Cita</h3>
+                    <span class="date">6 de Diciembre, 2025</span>
+                </div>
+                <p class="timeline-description">
+                    "La noche donde las luces de Navidad se apagaron ante tu brillo. Aquí comenzó todo."
+                </p>
+
+                <!-- Carrusel de imágenes -->
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track" id="carouselTrack">
+                            <!-- Las imágenes se cargarán dinámicamente desde JavaScript -->
+                            <div class="carousel-slide active">
+                                <img src="assets/images/nuestra primera cita/1.jpg" alt="Primera cita 1" loading="lazy"
+                                    data-message="El momento en que todo comenzó. Miro esta foto y recuerdo cómo mi corazón supo desde ese instante que eras tú.">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/nuestra primera cita/2.jpg" alt="Primera cita 2" loading="lazy"
+                                    data-message="Tu sonrisa iluminó esa noche más que cualquier alumbrado navideño. Desde ese día supe que quería verte sonreír así toda la vida.">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/nuestra primera cita/3.jpg" alt="Primera cita 3" loading="lazy"
+                                    data-message="La primera selfie de muchas. El inicio de nuestra historia, el primer capítulo de un libro que quiero escribir contigo para siempre.">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/nuestra primera cita/4.jpg" alt="Primera cita 4" loading="lazy"
+                                    data-message="Cada vez que veo tus ojos en esta foto, recuerdo por qué me enamoré. Hay un universo entero en tu mirada.">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/nuestra primera cita/5.jpg" alt="Primera cita 5" loading="lazy"
+                                    data-message="Estábamos nerviosos pero felices. Tus manos entre las mías por primera vez, y supe que nunca querría soltarlas.">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/nuestra primera cita/6.jpg" alt="Primera cita 6" loading="lazy"
+                                    data-message="Nuestro primer beso bajo las luces de Navidad. El momento que quedó grabado en mi alma para siempre. Fue mágico, fuiste mágica.">
+                            </div>
+                        </div>
+
+                        <!-- Botones de navegación -->
+                        <button class="carousel-btn prev" id="prevBtn" aria-label="Anterior">‹</button>
+                        <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente">›</button>
+
+                        <!-- Indicadores (dots) -->
+                        <div class="carousel-indicators" id="carouselIndicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                            <span class="indicator" data-slide="3"></span>
+                            <span class="indicator" data-slide="4"></span>
+                            <span class="indicator" data-slide="5"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 MOMENTO 2: PRIMER RAMITO & NAVIDAD
+                 Tarjetas estilo Polaroid
+            ======================================== -->
+            <div class="timeline-item fade-in-left">
+                <div class="timeline-header">
+                    <h3>Momentos Especiales</h3>
+                    <span class="date">Diciembre, 2025</span>
+                </div>
+                <p class="timeline-description">
+                    "Cada detalle tuyo queda guardado en mi corazón (y en mi galería)."
+                </p>
+
+                <!-- Grid de tarjetas Polaroid -->
+                <div class="polaroid-grid">
+                    <!-- Primer ramito -->
+                    <div class="polaroid">
+                        <div class="polaroid-image">
+                            <img src="assets/images/el primer ramito que te di/1.jpg" alt="Primer ramito" loading="lazy"
+                                data-message="El primer ramito que te di, tan pequeño como mi valentía ese día, pero tan grande como mi deseo de verte sonreír. Tus ojos brillaron y mi corazón se derritió.">
+                        </div>
+                        <div class="polaroid-caption">El primer ramito para ti 💐</div>
+                    </div>
+
+                    <!-- Fotos de Navidad -->
+                    <div class="polaroid">
+                        <div class="polaroid-image">
+                            <img src="assets/images/fotitos de ella en navidad/1.jpg" alt="Navidad 1" loading="lazy"
+                                data-message="Hermosa como siempre, pero esa noche brillabas diferente. La magia de Navidad se quedó corta comparada con la magia que vi en ti.">
+                        </div>
+                        <div class="polaroid-caption">Magia navideña contigo ✨</div>
+                    </div>
+
+                    <div class="polaroid">
+                        <div class="polaroid-image">
+                            <img src="assets/images/fotitos de ella en navidad/2.jpg" alt="Navidad 2" loading="lazy"
+                                data-message="Santa trajo muchos regalos esa Navidad, pero ninguno se compara con el regalo que eres tú en mi vida. Eres mi mayor bendición.">
+                        </div>
+                        <div class="polaroid-caption">Mi regalo favorito 🎁</div>
+                    </div>
+
+                    <div class="polaroid">
+                        <div class="polaroid-image">
+                            <img src="assets/images/fotitos de ella en navidad/3.jpg" alt="Navidad 3" loading="lazy"
+                                data-message="Dulce como el chocolate caliente, cálida como las luces navideñas. Diciembre 2025 será siempre el mes más especial porque empezamos esto.">
+                        </div>
+                        <div class="polaroid-caption">Dulzura de diciembre 🎄</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 MOMENTO 3: CARNAVAL EN PASTO
+                 Grid tipo Masonry (desordenado)
+            ======================================== -->
+            <div class="timeline-item fade-in-right">
+                <div class="timeline-header">
+                    <h3>Carnaval en Pasto</h3>
+                    <span class="date">Enero, 2026</span>
+                </div>
+                <p class="timeline-description">
+                    "A tu lado, cualquier día se convierte en una fiesta inolvidable."
+                </p>
+
+                <!-- Grid Masonry -->
+                <div class="masonry-grid">
+                    <div class="masonry-item">
+                        <img src="assets/images/el primer carnaval que pasamos juntos/1.jpg" alt="Carnaval 1"
+                            loading="lazy"
+                            data-message="Nuestro primer carnaval juntos y ya quiero vivir mil más a tu lado. Con esa sonrisa tuya cualquier lugar se convierte en fiesta.">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="assets/images/el primer carnaval que pasamos juntos/2.jpg" alt="Carnaval 2"
+                            loading="lazy"
+                            data-message="Entre los colores, la música y la alegría del carnaval, lo único que podía ver eras tú. Eres la celebración más bonita de mi vida.">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="assets/images/el primer carnaval que pasamos juntos/3.jpg" alt="Carnaval 3"
+                            loading="lazy"
+                            data-message="Riendo contigo en medio de la multitud, sintiendo que el mundo somos solo tú y yo. Así quiero estar siempre: a tu lado, celebrando la vida.">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="assets/images/el primer carnaval que pasamos juntos/4.jpg" alt="Carnaval 4"
+                            loading="lazy"
+                            data-message="La alegría en tus ojos es mi canción favorita. Gracias por compartir estos momentos mágicos conmigo, mi vida.">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 MOMENTO 4: POMPOMPURIN & FOTITOS
+                 Collage flotante con movimiento suave
+            ======================================== -->
+            <div class="timeline-item fade-in-up">
+                <div class="timeline-header">
+                    <h3>Nuestra Estética Kawaii 🌟</h3>
+                </div>
+                <p class="timeline-description">
+                    "Pompompurin y tú: la combinación perfecta de ternura."
+                </p>
+
+                <!-- Collage flotante -->
+                <div class="floating-collage">
+                    <div class="floating-image" style="--delay: 0s">
+                        <img src="assets/images/pompompurin/1-.jpg" alt="Pompompurin" loading="lazy"
+                            data-message="Tan tierno como Pompompurin, pero nada se compara con la ternura que siento cada vez que pienso en ti. Eres mi personaje kawaii favorito de la vida real.">
+                    </div>
+                    <div class="floating-image" style="--delay: 0.5s">
+                        <img src="assets/images/fotitos de ella/1.jpg" alt="Foto de ella" loading="lazy"
+                            data-message="Perfecta en cada ángulo, en cada foto, en cada momento. No existe una sola versión tuya que no me robe el aliento.">
+                    </div>
+                    <div class="floating-image" style="--delay: 1s">
+                        <img src="assets/images/pompompurin/5-Pompompurin.jpg" alt="Pompompurin" loading="lazy"
+                            data-message="Como Pompompurin, nuestra relación es suave, dulce y llena de alegría. Eres el pudín más delicioso de mi vida.">
+                    </div>
+                    <div class="floating-image" style="--delay: 1.5s">
+                        <img src="assets/images/fotitos de ella/2.jpg" alt="Foto de ella" loading="lazy"
+                            data-message="Esos ojos que me conquistaron, ese rostro que amo despertar viendo. Eres arte viviente, mi obra maestra favorita.">
+                    </div>
+                    <div class="floating-image" style="--delay: 2s">
+                        <img src="assets/images/pompompurin/7-I love u.jpg" alt="Pompompurin love" loading="lazy"
+                            data-message="I love you, te amo, te quiero, te adoro. En cualquier idioma y de todas las formas posibles. Pompompurin lo dice y yo también: eres mi todo.">
+                    </div>
+                    <div class="floating-image" style="--delay: 2.5s">
+                        <img src="assets/images/fotitos de ella/3.jpg" alt="Foto de ella" loading="lazy"
+                            data-message="Radiante, hermosa, única. Cada foto tuya es un recordatorio de lo afortunado que soy de que seas mía y yo tuyo.">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisor ondulado -->
+    <div class="wave-divider inverted">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                fill="#fff"></path>
+        </svg>
+    </div>
+
+    <!-- ====================================================================
+         SECCIÓN: POR QUÉ TÚ
+         Nueva sección creativa con razones románticas
+    ==================================================================== -->
+    <section id="why-you" class="why-section">
+        <div class="container">
+            <h2 class="section-title">Por Qué Tú 💕</h2>
+
+            <div class="why-grid">
+                <!-- Razón 1 -->
+                <div class="why-card fade-in-up">
+                    <div class="why-icon">✨</div>
+                    <h3>Tu Sonrisa Resplandeciente</h3>
+                    <p>Cada vez que sonríes, el mundo se detiene y solo existo yo contemplando la luz que irradias. Esa
+                        sonrisa que me roba el aliento y me regala la felicidad más pura.</p>
+                </div>
+
+                <!-- Razón 2 -->
+                <div class="why-card fade-in-up">
+                    <div class="why-icon">💖</div>
+                    <h3>Tu Corazón Noble</h3>
+                    <p>La forma en que cuidas de mí, cómo te preocupas por los detalles más pequeños, demuestra la
+                        belleza de tu alma. Tienes el corazón más puro que he conocido.</p>
+                </div>
+
+                <!-- Razón 3 -->
+                <div class="why-card fade-in-up">
+                    <div class="why-icon">🌟</div>
+                    <h3>Tu Ternura Infinita</h3>
+                    <p>La dulzura con la que me tratas, cada palabra tierna, cada gesto cariñoso, me hace sentir el
+                        hombre más afortunado del universo entero.</p>
+                </div>
+
+                <!-- Razón 4 -->
+                <div class="why-card fade-in-up">
+                    <div class="why-icon">🌈</div>
+                    <h3>Cómo Me Haces Sentir</h3>
+                    <p>Contigo descubrí que el amor verdadero existe, que es posible sentir mariposas cada día, y que la
+                        felicidad tiene nombre: María Alejandra.</p>
+                </div>
+
+                <!-- Razón 5 -->
+                <div class="why-card fade-in-up">
+                    <div class="why-icon">🦋</div>
+                    <h3>Tu Manera de Ser</h3>
+                    <p>Eres auténtica, divertida, inteligente y única. No existe nadie en el mundo como tú, y eso es lo
+                        que más amo: que seas exactamente quien eres.</p>
+                </div>
+
+                <!-- Razón 6 -->
+                <div class="why-card fade-in-up">
+                    <div class="why-icon">💫</div>
+                    <h3>Nuestra Conexión</h3>
+                    <p>La forma en que nos entendemos sin palabras, cómo compartimos nuestra locura de "gatitos
+                        marcianos", es algo que nunca encontraré con nadie más.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisor ondulado -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                fill="#FFF9E3"></path>
+        </svg>
+    </div>
+
+    <!-- ====================================================================
+         SECCIÓN: PLAYLIST DE SPOTIFY - CANCIONES PARA TI
+         Playlist especial con canciones que la representan
+    ==================================================================== -->
+    <section id="spotify-playlist" class="spotify-section">
+        <div class="container">
+            <h2 class="section-title">Canciones Que Me Recuerdan A Ti 🎵</h2>
+
+            <div class="spotify-description fade-in-up">
+                <p>Cada canción en esta playlist me hace pensar en ti. Cuando las escucho, siento tu presencia, tu
+                    energía, tu esencia. Esta es la banda sonora de nosotros, mi amor. 💛</p>
+            </div>
+
+            <div class="spotify-player-wrapper fade-in-up">
+                <div class="spotify-frame">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px"
+                        src="https://open.spotify.com/embed/playlist/1bKHJF7LQe3KT1NBpgcEhd?utm_source=generator"
+                        width="100%" height="380" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" title="Playlist de Spotify - Canciones para María Alejandra">
+                    </iframe>
+                </div>
+
+                <div class="spotify-message">
+                    <p>🎧 Cada nota, cada letra, cada melodía... todo me lleva a ti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisor ondulado -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                fill="#FFFFFF"></path>
+        </svg>
+    </div>
+
+    <section id="letter" class="letter-section">
+        <div class="container">
+            <h2 class="section-title">Una Carta Para Ti 💌</h2>
+
+            <!-- Sobre simple con degradado -->
+            <div class="simple-envelope" id="simpleEnvelope">
+                <div class="envelope-gradient">
+                    <div class="envelope-icon">💌</div>
+                    <p class="envelope-message">Haz click para leer mi carta</p>
+                    <div class="envelope-heart-pulse">💛</div>
+                </div>
+            </div>
+
+            <!-- Carta expandida -->
+            <div class="letter-modal" id="letterModal">
+                <div class="letter-close-overlay" id="letterCloseOverlay"></div>
+                <div class="letter-container">
+                    <h3 class="letter-title">¡Hola, mi vida!</h3>
+
+                    <div class="letter-text">
+                        <p>Parece increíble que apenas estemos celebrando nuestro primer mes oficial, porque la verdad
+                            es que siento que te he esperado toda mi vida. Como te dije cuando empezó este año, tú
+                            llegaste sin avisar y terminaste salvando mi 2025 y dándole todo el sentido a mi 2026. Dicen
+                            que el tiempo es relativo, y contigo lo he comprobado: cuando estamos juntos, las horas
+                            vuelan, pero cada segundo a tu lado se queda grabado en mi corazón.</p>
+
+                        <p>Quería escribirte esto para decirte lo inmensamente feliz que me haces. Gracias por coincidir
+                            conmigo, por ser mi "casualidad más bonita" y demostrarme que esa frase de "todo pasa por
+                            algo" es real. Me encanta todo de ti: tu carita, tus ojos, tu cabello, y esa forma tan dulce
+                            que tienes de ser. Me fascina que seamos ese par de "gatitos marcianos" que se entienden en
+                            su propia locura.</p>
+
+                        <p>Este mes ha sido una montaña rusa de emociones hermosas. Desde nuestro primer beso en los
+                            alumbrados, pasando por esas noches en las que nos quedamos hablando o jugando Roblox hasta
+                            la madrugada, hasta los momentos en que nos hemos cuidado mutuamente cuando nos enfermamos.
+                            Incluso en la distancia, cuando extraño tu calor y tu olor, me siento afortunado de saber
+                            que eres mi novia.</p>
+
+                        <p>Eres mi florcita y yo soy tu colibrí. Quiero seguir construyendo esto contigo, quiero seguir
+                            conociéndote, cuidándote y haciéndote feliz cada día. No tengo dudas de que quiero estar
+                            contigo, no solo este mes, sino mucho tiempo más, porque como te he dicho: mi intención es
+                            estar contigo toda la vida.</p>
+
+                        <p>Te amo muchísimo, mi niña hermosa. Gracias por elegirme y por dejarme ser tu hombre.</p>
+
+                        <p class="letter-sign">Tuyo, Tøny. 🌦️</p>
+                    </div>
+
+                    <button class="letter-close-btn" id="letterCloseBtn">Cerrar Carta 💌</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         REPRODUCTOR DE MÚSICA FLOTANTE
+         Widget minimizable con playlist completa
+    ==================================================================== -->
+    <div class="music-player" id="musicPlayer">
+        <!-- Botón de minimizar/maximizar -->
+        <button class="player-toggle" id="playerToggle" aria-label="Minimizar/Maximizar">
+            <span class="toggle-icon">🎵</span>
+        </button>
+
+        <!-- Contenido del reproductor -->
+        <div class="player-content" id="playerContent">
+            <!-- Carátula de la canción -->
+            <div class="player-artwork">
+                <img id="albumArt" src="assets/song/Eres Tú  - M2H.png" alt="Album Art">
+            </div>
+
+            <!-- Información de la canción -->
+            <div class="player-info">
+                <div class="song-title" id="songTitle">Eres Tú</div>
+                <div class="song-artist" id="songArtist">M2H</div>
+            </div>
+
+            <!-- Controles -->
+            <div class="player-controls">
+                <button class="control-btn" id="prevSong" aria-label="Canción anterior">⏮</button>
+                <button class="control-btn play-btn" id="playPause" aria-label="Reproducir/Pausar">▶</button>
+                <button class="control-btn" id="nextSong" aria-label="Siguiente canción">⏭</button>
+            </div>
+
+            <!-- Barra de progreso -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="time-info">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <!-- Control de volumen -->
+            <div class="volume-container">
+                <span class="volume-icon">🔊</span>
+                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+            </div>
+        </div>
+
+        <!-- Audio element (oculto) -->
+        <audio id="audioPlayer"></audio>
+    </div>
+
+    <!-- ====================================================================
+         MODAL PARA VER IMÁGENES EN GRANDE
+         Se abre al hacer click en cualquier imagen
+    ==================================================================== -->
+    <div class="image-modal" id="imageModal">
+        <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Vista ampliada">
+            <p class="modal-caption" id="modalCaption"></p>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+         FOOTER
+         Mensaje final romántico
+    ==================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">💛 Hecho con amor por Antony para María Alejandra 💛</p>
+            <p class="footer-date">7 de enero, 2026 - Por siempre</p>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         SCRIPT JAVASCRIPT PRINCIPAL
+    ============================================ -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
